@@ -20,7 +20,7 @@ public class MainLogin {
         while (!inicioSesionExitoso) {
 
             if (usuario.equals(USUARIO_CORRECTO) && contraseña.equals(CONTRASEÑA_CORRECTA)) {
-                inicioSesionExitoso = true; // Marcamos el inicio de sesión como exitoso
+                inicioSesionExitoso = true;
                 System.out.println("Inicio de sesión exitoso. ¡Bienvenido a la tienda, " + usuario + "!");
             } else {
                 System.out.println("Nombre de usuario o contraseña incorrectos. Inténtelo de nuevo.");
