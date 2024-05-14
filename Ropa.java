@@ -1,14 +1,12 @@
 public class Ropa {
     private String vendedor;
     private String comprador;
-    private String Seccion;
+    private int id;
     private String talla;
     private double precio;
 
-    public Ropa(String vendedor, String comprador, String Seccion, String talla, Double precio) {
-        this.vendedor = vendedor;
-        this.comprador = comprador;
-        this.Seccion = Seccion;
+    public Ropa(int id, String talla, double precio) {
+        this.id = id;
         this.talla = talla;
         this.precio = precio;
     }
@@ -29,12 +27,12 @@ public class Ropa {
         this.comprador = comprador;
     }
 
-    public String getSeccion() {
-        return Seccion;
+    public int getId() {
+        return id;
     }
 
-    public void setSeccion(String seccion) {
-        Seccion = seccion;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTalla() {
@@ -55,8 +53,7 @@ public class Ropa {
 
     @Override
     public String toString() {
-        return "Ropa [vendedor=" + vendedor + ", comprador=" + comprador + ", Seccion=" + Seccion + ", talla=" + talla
-                + ", precio=" + precio + "]";
+        return "Ropa [id=" + id + ", talla=" + talla + ", precio=" + precio + "]";
     }
 
 }
