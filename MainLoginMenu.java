@@ -47,7 +47,7 @@ public class MainLoginMenu {
                     realizarVenta();
                     break;
                 case 4:
-                    System.out.println("Saliendo del sistema...");
+                    System.out.println("Saliendo del sistema... Espere por favor");
                     break;
                 default:
                     System.out.println("Opción no válida. Por favor, ingrese una opción válida.");
