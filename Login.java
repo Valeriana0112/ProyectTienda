@@ -1,10 +1,21 @@
-public class Login {
-    
-    public static final String USUARIO_CORRECTO = "claudia";
-    public static final String CONTRASEÑA_CORRECTA = "030405";
+import java.util.HashMap;
+import java.util.Map;
 
-    
-    public static boolean verificarCredenciales(String usuario, String contraseña) {
-        return usuario.equals(USUARIO_CORRECTO) && contraseña.equals(CONTRASEÑA_CORRECTA);
+public class Login {
+    private static final Map<String, String> usuarios = new HashMap<>();
+    static {
+        usuarios.put("claudia", "030405");
+        usuarios.put("Josue", "090102");
+        usuarios.put("Angello", "010203");
+        usuarios.put("Erick", "123456");
+    }
+
+    public static boolean autenticar(String usuario, String contraseña) {
+        return usuarios.containsKey(usuario) && usuarios.get(usuario).equals(contraseña);
+    }
+
+    public static void agregarUsuario(String usuario, String contraseña) {
+        usuarios.put(usuario, contraseña);
+
     }
 }
